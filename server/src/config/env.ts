@@ -6,6 +6,7 @@ dotenv.config({ quiet: true });
 const schema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),
   PORT: z.coerce.number().default(4000),
+  COLLAB_PORT: z.coerce.number().default(4001),
   MONGO_URI: z.string().min(1),
   CLIENT_URL: z.string().min(1).default('http://localhost:5173'),
 });
